@@ -1,0 +1,36 @@
+﻿@page
+@model PROVA_DEV2.Pages.Filmes.lista_filmesModel
+@{
+    ViewData["Title"] = "Lista Filmes";
+}
+
+<h1>@ViewData["Title"]</h1>
+<a class="btn btn-secondary btn-sm" a href="/create">Novo Filme</a>
+<br />
+<br />
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Gênero</th>
+            <th>Criado em</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listFilms)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.name</td>
+                <td>@item.genre</td>
+                <td>@item.create_at</td>
+                <td>
+                    <a class="btn btn-warning" a href="/Filmes/edit?id=@item.Id">Edit</a>
+                    <a class="btn btn-dark" a href="Filmes/delete?id=@item.Id">Del</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

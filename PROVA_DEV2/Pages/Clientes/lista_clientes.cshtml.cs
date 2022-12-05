@@ -12,7 +12,7 @@ namespace PROVA_DEV2.Pages.Clientes
         {
             try
             {
-                string connectionstring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=prova_dev2;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                string connectionstring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Clientes_db;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
